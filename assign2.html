@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+        }
+    
+        .menu {
+          position: relative;
+          display: inline-block;
+        }
+    
+        .menu-btn {
+          background-color: #2980b9;
+          color: white;
+          padding: 10px 20px;
+          font-size: 18px;
+          border: none;
+          cursor: pointer;
+        }
+    
+        .dropdown {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+    
+        .dropdown a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+    
+        .dropdown a:hover {
+          background-color: #ddd;
+        }
+      </style>
+</head>
+<body>
+    <div class="menu">
+        <button class="menu-btn" onclick="toggleDropdown()">Thiết kế web</button>
+        <div class="dropdown" id="myDropdown">
+          <a href="#">HTML</a>
+          <a href="#">CSS</a>
+          <a href="#">Javascript</a>
+        </div>
+      </div>
+      <script>
+        function toggleDropdown() {
+    var dropdown = document.getElementById("myDropdown");
+    dropdown.style.display = dropdown.style.display === "block" ?"none" : "block" ;  }
+
+  
+      </script>
+</body>
+</html>

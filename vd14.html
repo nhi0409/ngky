@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 900px;
+            margin: 0 auto;
+            font-family: segoe ui;
+            font-size: 13px;
+        }
+
+        .menu {
+            height: 100px;
+            background-color: rgb(13, 121, 13);
+            line-height: 100px;
+            color: white;
+            position: fixed;
+            width: 900px;
+        }
+
+        .trai {
+            float: left;
+            font-size: 2em;
+            margin-left: 125px;
+            transition: 0.4s;
+            height: 100px;
+        }
+
+        .phai {
+            float: right;
+            transition: 0.4s;
+            height: 100px;
+        }
+
+        .phai a {
+            text-decoration: none;
+            padding-right: 40px;
+            font-size: 1.5em;
+            color: wheat;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .nho1laitrai {
+            font-size: 2em;
+            margin-left: 100px;
+            color: black;
+        }
+
+        .nho1laiphai {
+            font-size: 1.2em;
+            padding-right: 30px;
+            height: 80px;
+        }
+
+        .cot {
+            width: 20%;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="trai">LOGO</div>
+            <div class="phai">
+                <a href="#">Trang chủ</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Liên hệ</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cot">
+                <h2 class="nho1laitrai">Tiêu đề</h2>
+                <p class="nho1laiphai">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit unde possimus odio culpa odit sit unde possimus odio culpa.</p>
+            </div>
+            <div class="cot">
+                <h2 class="nho1laitrai">Tiêu đề</h2>
+                <p class="nho1laiphai">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit unde possimus odio culpa odit sit unde possimus odio culpa.</p>
+            </div>
+            <div class="cot">
+                <h2 class="nho1laitrai">Tiêu đề</h2>
+                <p class="nho1laiphai">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit unde possimus odio culpa odit sit unde possimus odio culpa.</p>
+            </div>
+            <div class="cot">
+                <h2 class="nho1laitrai">Tiêu đề</h2>
+                <p class="nho1laiphai">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit unde possimus odio culpa odit sit unde possimus odio culpa.</p>
+            </div>
+            <div class="cot">
+                <h2 class="nho1laitrai">Tiêu đề</h2>
+<p class="nho1laiphai">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit unde possimus odio culpa odit sit unde possimus odio culpa.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var doitungmenu1 = document.querySelector(".trai");
+            var doitungmenu2 = document.querySelector(".phai");
+            var trangthai = "duoi110";
+
+            window.addEventListener("scroll", function() {
+                console.log(window.pageYOffset);
+                if (window.pageYOffset > 110) {
+                    if (trangthai == "duoi110") {
+                        console.log("ok");
+                        trangthai = "tren110";
+                        doitungmenu1.classList.add("nho1laitrai");
+                        doitungmenu2.classList.add("nho1laiphai");
+                    }
+                } else if (window.pageYOffset < 110) {
+                    if (trangthai == "tren110") {
+                        doitungmenu1.classList.remove("nho1laitrai");
+                        doitungmenu2.classList.remove("nho1laiphai");
+                        trangthai = "duoi110";
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

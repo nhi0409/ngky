@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="container">
+    <p id="p1">the first paragraph</p>
+    <p id="p2">the second paragraph</p>
+</div>
+<button onclick="changenode()">change node</button>
+<script>
+function changenode(){
+    var node=document.createElement('div');
+    node.innerText="The new one";
+    var x=document.getElementById('container');
+    var y=document.getElementById('p2');
+    x.replaceChild(node,y);
+}
+</script>
+</body>
+</html>
